@@ -1,11 +1,10 @@
 package com.johnsaylor.sql;
 
-import java.lang.*;
 import java.util.*;
 
 public class TrainComposition {
 
-    ArrayDeque<Integer> trains = new ArrayDeque<Integer>();
+    private ArrayDeque<Integer> trains = new ArrayDeque<Integer>();
     
     public void attachWagonFromLeft(int wagonId) {
         trains.addFirst(wagonId);
@@ -27,7 +26,8 @@ public class TrainComposition {
         TrainComposition train = new TrainComposition();
         train.attachWagonFromLeft(7);
         train.attachWagonFromLeft(13);
-        System.out.println(train.detachWagonFromRight()); // 7
+
+        System.out.print(train.detachWagonFromRight()); // 7
         System.out.println(train.detachWagonFromLeft()); // 13
     }
 }
