@@ -5,7 +5,7 @@ public class Parser {
     ArrayDeque<String> stack = new ArrayDeque<>();
 
     public boolean isBalance(String input) {
-
+        return true;
     }
 
 }
