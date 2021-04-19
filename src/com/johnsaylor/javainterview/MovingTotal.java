@@ -2,23 +2,27 @@ package com.johnsaylor.javainterview;
 import java.util.*;
 
 public class MovingTotal {
-    List<Integer> internalList = new ArrayList<>();
     List<Integer> results = new ArrayList<>();
     int insertIndex = 0;
-    int[] lastThree = new int[3];
+    int a, b, c;
     /**
      * Adds/appends list of integers at the end of internal list.
      */
     public void append(int[] list) {
         for (int n : list) {
-            internalList.add(n);
-            lastThree[insertIndex % 3] = n;
-            if (insertIndex >= 3) {
-                System.out.println(Arrays.toString(lastThree));
-                results.add((lastThree[0] + lastThree[1] + lastThree[2]));
+
+            a = b;
+            b = c;
+            c = n;
+
+            if (insertIndex < 2) {
+                insertIndex++;
+                continue;
             }
-            insertIndex++;
+
+            results.add(a + b + c);
         }
+        System.out.println(results);
     }
 
     /**
