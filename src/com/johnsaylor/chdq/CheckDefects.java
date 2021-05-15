@@ -1,5 +1,7 @@
 package com.johnsaylor.chdq;
 
+import java.util.List;
+
 public class CheckDefects {
     public static int largestArea(List<List<Integer>> samples) {
         // Write your code here
